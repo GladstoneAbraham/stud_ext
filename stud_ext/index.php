@@ -12,15 +12,27 @@ and open the template in the editor.
     <body>
         <h1>Online Student's Co-curricular Activities Management System</h1>
         <div class="sign_in">
-            Username :<input type="text" name = "fname"><br>
-            Date of birth :<input type="text" name = "dob"><br>
-            Password :<input type="text" name = "password"><br>
-            <button>Sign in</button>
+            <form action="" method="post">
+              Username :<input type="text" name = "uname"><br>
+              Date of birth :<input type="text" name = "dob"><br>
+              Password :<input type="text" name = "password"><br>
+              <input type="submit" name="submit" value"Sign in"><br>
+            </form>
         </div>
         <?php
         // put your code here
-        
+            include "connect.php"
+            $uname = $_POST['uname'];
+            $dob = $_POST['dob'];
+            $password = $_POST['password'];
+            $sql = "select ";
+            $retval=mysql_query($sql,$dbconn);
+                if(!$retval)
+                  echo"Not inserted";
+                else
+                  echo"Inserted successfully";
+
         ?>
-        
+
     </body>
 </html>
