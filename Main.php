@@ -1,4 +1,5 @@
 <?php
+		//error_reporting(0);
 		include 'function.php';
 		if(isset($_POST['sub'])){
 			$user = $_POST['uname'];
@@ -7,7 +8,7 @@
 			$pass = $_POST['upass'];
 			$dob = $_POST['dob'];
 			$dob = date('Y-m-d', strtotime($dob));
-			$sql = "SELECT * FROM `stud` where `uname` = '$user' and `Dob` = '$dob'";
+			$sql = "SELECT * FROM `stud` where `uname` = '$user' and `dob` = '$dob'";
 			$res = mysqli_query($conn,$sql);
 			if($rest = mysqli_fetch_array($res))
 				{	if($rest['pass'] == $pass){

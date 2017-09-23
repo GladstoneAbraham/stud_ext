@@ -20,7 +20,8 @@ while($rest = mysqli_fetch_array($res)){
 <html>
 <body>
 <div>
-<h1>Hi <?php echo $name;?> . !!</h1>
+<h1>Hi 
+<?php echo $name;?> . !!</h1>
 </div>
 
 </body>
