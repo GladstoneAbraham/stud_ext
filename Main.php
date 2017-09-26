@@ -4,7 +4,7 @@
 		if(isset($_POST['sub'])){
 			$user = $_POST['uname'];
 			$user = stripslashes($user);
-			$user = mysql_real_escape_string($user);
+			//$user = mysql_real_escape_string($user);
 			$pass = $_POST['upass'];
 			$dob = $_POST['dob'];
 			$dob = date('Y-m-d', strtotime($dob));
