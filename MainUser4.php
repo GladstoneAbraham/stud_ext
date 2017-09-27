@@ -1,5 +1,6 @@
 <?php
 include 'function.php';
+error_reporting(0);
 $sid = $_SESSION['id'];
 $sql = 	"SELECT * FROM `stud_2019` WHERE `Username` = '$sid'";	
 $res = mysqli_query($conn,$sql);
@@ -46,14 +47,16 @@ h2{
 	font-style: cursive;
 	text-align: center;
 }
-
+p{
+	text-align: right;
+}
 
 button {
 	position: relative;
     color: rgba(255,255,255,1);
     text-decoration: none;
     background-color: rgba(86, 92, 183,1);
-    font-family: 'Yanone Kaffeesatz';
+    
     font-weight: 700;
     font-size: 1.7em;
     display: block;
@@ -64,7 +67,7 @@ button {
     -webkit-box-shadow: 0px 9px 0px rgba(49, 54, 124,1), 0px 9px 25px rgba(0,0,0,.7);
     -moz-box-shadow: 0px 9px 0px rgba(49, 54, 124,1), 0px 9px 25px rgba(0,0,0,.7);
     box-shadow: 0px 9px 0px rgba(49, 54, 124,1), 0px 9px 25px rgba(0,0,0,.7);
-    margin: 100px auto;
+    margin: 50px auto;
 	width: 140px;
 	text-align: center;
 	
@@ -97,7 +100,7 @@ button:active {
 
 <table>
 		<tr>
-			<th>Parameters</th>
+			<th>Name</th>
 			<th>Details</th>		
 		</tr>
 	<tbody>
@@ -136,8 +139,11 @@ button:active {
 			});
 		</script>
 </table>
+
 <center><button id="save">Update</button></center>
 </div>
+<p>If you have any wrong information,then click on the data and change it and click update !</p>
+
 
 </body>
 </html>
